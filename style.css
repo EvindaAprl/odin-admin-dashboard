@@ -21,20 +21,24 @@ body {
 
 .dashboard-container {
   display: grid;
-  grid-template-columns: 20% 1fr;
+  grid-template-columns: 1fr 4fr;
+  min-height: 100vh;
 }
 
 /* SIDEBAR */
 .sidebar {
-  background-color: var(--blue-color);
-  color: white;
   display: flex;
   flex-direction: column;
+  flex-shrink: 1;
   gap: 2.5rem;
-  padding: 0.75rem;
+  background-color: var(--blue-color);
+  color: white;
   position: relative;
   z-index: 10;
   box-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+  min-width: 3rem;
+  padding: 0.75rem;
+  overflow: hidden;
 }
 /* Sidebar Brand */
 .sidebar-brand {
@@ -97,7 +101,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4rem;
+  gap: 6rem;
 }
 .search-container {
   display: flex;
@@ -157,11 +161,11 @@ input[type="search"] {
   gap: 0.25rem;
 }
 .profile-text p {
-  font-size: 0.75em;
+  font-size: clamp(0.75em, 2.5vw, 0.875em);
   font-weight: bold;
 }
 .profile-name {
-  font-size: 1em;
+  font-size: clamp(0.875em, 2.5vw, 1em);
   font-weight: bold;
   line-height: 1.2;
 }
@@ -176,14 +180,17 @@ input[type="search"] {
   background-color: var(--blue-color);
   color: white;
   font-weight: bold;
-  font-size: 0.75em;
+  font-size: clamp(0.75em, 2.5vw, 0.875em);
   border: none;
   border-radius: 20px;
   padding: 0.5rem 1.25rem;
   min-width: 5rem;
   min-height: 0.35rem;
 }
-
+button:hover,
+img:hover {
+  cursor: pointer;
+}
 /* MAIN CONTENT */
 .main-content {
   display: grid;
@@ -192,7 +199,7 @@ input[type="search"] {
 }
 /* Main Content (Projects) */
 .body-content h2 {
-  font-size: 0.9rem;
+  font-size: clamp(0.875em, 2.5vw, 1em);
   font-weight: bold;
 }
 .projects-grid {
@@ -212,12 +219,12 @@ input[type="search"] {
   position: relative;
 }
 .project-card h3 {
-  font-size: 0.75rem;
+  font-size: clamp(0.75em, 2.5vw, 1em);
   font-weight: bold;
   line-height: 1.2;
 }
 .project-card p {
-  font-size: 0.7rem;
+  font-size: clamp(0.7em, 2.5vw, 0.875em);
   color: #555;
   padding: 0.25rem 0 1.25rem;
 }
@@ -241,7 +248,7 @@ input[type="search"] {
 }
 .announcements-section h2,
 .trending-section h2 {
-  font-size: 0.9rem;
+  font-size: clamp(0.875em, 2.5vw, 1em);
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
@@ -257,11 +264,11 @@ input[type="search"] {
   padding: 0.5rem 0;
 }
 .announcement-item h3 {
-  font-size: 0.65rem;
+  font-size: clamp(0.65em, 2.5vw, 0.875em);
   font-weight: bold;
 }
 .announcement-item p {
-  font-size: 0.55rem;
+  font-size: clamp(0.55em, 2.5vw, 0.75em);
   color: #555;
   padding: 0.25rem 0;
 }
@@ -297,9 +304,9 @@ input[type="search"] {
   justify-content: center;
 }
 .user-info .username {
-  font-size: 0.65rem;
+  font-size: clamp(0.65em, 2.5vw, 0.875em);
 }
 .user-info .user-subtitle {
-  font-size: 0.6rem;
+  font-size: clamp(0.6em, 2.5vw, 0.75em);
   color: #555;
 }
