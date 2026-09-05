@@ -192,7 +192,7 @@ input[type="search"] {
 }
 /* Main Content (Projects) */
 .body-content h2 {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 .projects-grid {
@@ -204,7 +204,7 @@ input[type="search"] {
   border-radius: 5px;
   border-left: 0.35rem solid #efb529;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  padding: 1.25rem 0.75rem 0.75rem;
+  padding: 1.5rem 0.75rem 0.75rem;
   margin: 0.5rem 1.25rem 0.9rem 0;
   display: flex;
   flex-direction: column;
@@ -237,7 +237,13 @@ input[type="search"] {
 .side-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.75rem;
+}
+.announcements-section h2,
+.trending-section h2 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 /* Side Content (Announcements) */
 .announcements-container {
@@ -245,13 +251,23 @@ input[type="search"] {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   overflow: hidden;
-  margin-top: 10px;
+  padding: 0.5rem 1.25rem 0;
 }
 .announcement-item {
-  padding: 20px;
+  padding: 0.5rem 0;
 }
-.announcement-item:not(:last-child) {
+.announcement-item h3 {
+  font-size: 0.65rem;
+  font-weight: bold;
+}
+.announcement-item p {
+  font-size: 0.55rem;
+  color: #555;
+  padding: 0.25rem 0;
+}
+.announcement-item:not(:last-child) p {
   border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.75rem;
 }
 /* Side Content (Trending) */
 .trending-container {
@@ -259,16 +275,18 @@ input[type="search"] {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   overflow: hidden;
-  margin-top: 10px;
 }
 .trending-item {
   display: flex;
-  gap: 15px;
-  padding: 15px;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+}
+.trending-item:not(:last-child) {
+  padding-bottom: 0;
 }
 .trending-item .avatar {
-  width: 30px;
-  height: 30px;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 50%;
   object-fit: cover;
   background-color: #fbcc13;
@@ -276,4 +294,12 @@ input[type="search"] {
 .trending-item .user-info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+.user-info .username {
+  font-size: 0.65rem;
+}
+.user-info .user-subtitle {
+  font-size: 0.6rem;
+  color: #555;
 }
